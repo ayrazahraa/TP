@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #333; /* Dark background like the video */
+    color: white;
+    touch-action: none; /* Prevent default touch actions like pinch-zoom */
+}
+
+#game-container {
+    width: 95%;
+    max-width: 500px;
+    background-color: #444;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+header, footer {
+    margin-bottom: 20px;
+}
+
+#puzzle-area {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    background-color: #282828; /* Darker area for puzzle */
+    border: 2px solid #555;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative; /* For positioning matchsticks */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Matchstick Styling --- */
+.digit-container, .operator-container {
+    display: inline-flex; /* Or flex, grid */
+    position: relative; /* For absolute positioning of sticks within */
+    margin: 0 10px; /* Spacing between numbers/operators */
+    align-items: center;
+    justify-content: center;
+    /* Define width/height based on your stick representation */
+}
+
+.matchstick {
+    background-color: #deb887; /* Burlywood - matchstick color */
+    border: 1px solid #8b4513; /* Saddlebrown - darker edge */
+    position: absolute; /* Positioned within its digit/operator container */
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.2s; /* For selected state */
+}
+
+.matchstick.selected {
+    box-shadow: 0 0 10px yellow;
+    transform: scale(1.1);
+}
+
+/* Example of a horizontal and vertical stick */
+.matchstick.horizontal {
+    width: 40px; /* Stick length */
+    height: 8px;  /* Stick thickness */
+}
+
+.matchstick.vertical {
+    width: 8px;   /* Stick thickness */
+    height: 40px; /* Stick length */
+}
+
+/* --- End Matchstick Styling --- */
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0ad4e; /* Yellowish like puzzle title bar */
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ec971f;
+}
+
+#feedback-message {
+    margin-top: 10px;
+    font-weight: bold;
+}
