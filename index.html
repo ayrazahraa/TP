@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Matchstick Math Mender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Matchstick Math Mender</h1>
+            <div id="level-info">Level: <span id="current-level">1</span></div>
+            <div id="moves-info">Moves Left: <span id="moves-left">2</span></div>
+        </header>
+
+        <main id="puzzle-area">
+            <!-- Matchsticks will be dynamically generated here by JS (e.g., as SVGs or styled divs) -->
+        </main>
+
+        <footer>
+            <button id="check-button">Check</button>
+            <button id="reset-button">Reset</button>
+            <button id="hint-button">Hint</button>
+            <div id="feedback-message"></div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
